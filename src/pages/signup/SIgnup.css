@@ -1,0 +1,28 @@
+form{
+    width: 80%;
+    margin: auto;
+    max-width: 500px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0rem 5rem;
+
+}
+label{
+    padding-top: 1rem;
+}
+input{
+    outline: none;
+    padding: 2rem 0rem;
+    border-bottom: 2px solid purple;
+}
+
+.form-btn{
+    background-color: purple;
+    color: white ;
+    padding: 0.5rem;
+    width: 30%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
