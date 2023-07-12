@@ -31,6 +31,7 @@ const Signup = () => {
       if (res.status === 200) {
         setToken(res.data);
         localStorage.setItem('token', JSON.stringify(res.data));
+        // navigate('/place-to-stay')
         console.log(res.data);
       }
     } catch (error) {

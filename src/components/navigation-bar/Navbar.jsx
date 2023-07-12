@@ -82,11 +82,6 @@ const Navbar = () => {
       <Sidenav />
       <ConnectWallet />
       
-
-      
-
-      
-      
     </Flex>
   );
 };

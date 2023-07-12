@@ -109,7 +109,27 @@ navigate('/')
 
       </NavLink>
 
-      {token!== null ? <NavLink onClick={()=>{
+      
+      {token == null ? <NavLink
+        to={`/login`}
+        className={({ isActive }) => (isActive ? style.active : style.inactive)}
+      >
+        <ListItem
+          fontWeight={{ base: `thin`, xl: 400 }}
+          py={2}
+          fontSize={`xl`}
+        >
+          <Image
+            display={{ base: `inline`, xl: `none` }}
+            mr={2}
+            w="1rem"
+            src="https://img.icons8.com/metro/26/FFFFFF/conference-call.png"
+            alt="community"
+          />
+          Sign in
+        </ListItem>
+
+      </NavLink>:  <NavLink onClick={()=>{
         logoutUser()
       }}
         to={`/`}
@@ -128,25 +148,6 @@ navigate('/')
             alt="community"
           />
           log out
-        </ListItem>
-
-      </NavLink> : <NavLink
-        to={`/login`}
-        className={({ isActive }) => (isActive ? style.active : style.inactive)}
-      >
-        <ListItem
-          fontWeight={{ base: `thin`, xl: 400 }}
-          py={2}
-          fontSize={`xl`}
-        >
-          <Image
-            display={{ base: `inline`, xl: `none` }}
-            mr={2}
-            w="1rem"
-            src="https://img.icons8.com/metro/26/FFFFFF/conference-call.png"
-            alt="community"
-          />
-          Sign in
         </ListItem>
 
       </NavLink>}

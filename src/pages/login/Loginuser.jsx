@@ -13,6 +13,7 @@ const Login = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (token) {
+  
       navigate('/place-to-stay');
     }
   }, []);
@@ -28,8 +29,8 @@ const Login = () => {
         setToken(res.auth_token);
         localStorage.setItem('token', JSON.stringify(res.data.auth_token));
         navigate('/place-to-stay');
-        window.location.reload()
-        toast.success(`welcome ${incoming.username}`);
+        window.location.reload(toast.success(`welcome ${incoming.username}`))
+        ;
         //
       }
     } catch (error) {
